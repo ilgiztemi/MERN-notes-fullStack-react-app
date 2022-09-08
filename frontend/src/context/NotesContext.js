@@ -39,14 +39,14 @@ export const NotesProvider = ( { children } ) => {
         axios.post( "http://localhost:4001/delete", { _id } )
     }
     const handleUpdate = ( note ) => {
-        setInput({
+        setInput( {
             _id: note._id,
             title: note.title,
             content: note.content
-        })
-        setFlag(!flag);
-        if(Object.keys(input) !== "") {
-            console.log(input);
+        } )
+        setFlag( !flag );
+        if ( Object.keys( input ) !== "" ) {
+            console.log( input );
             const _id = note._id;
             axios.post( "http://localhost:4001/update", { _id, title: input.title, content: input.content } )
         }
