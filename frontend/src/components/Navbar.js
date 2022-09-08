@@ -33,11 +33,11 @@ const Navbar = () => {
     const handleCloseNavMenu = ( event ) => {
         setAnchorElNav( null );
         console.log( "handleCloseNavMenu", event.target.innerText );
-        if ( event.target.innerText === "HOME" ) {
+        if ( event.target.innerText === "HOME" || event.target.innerText === "Home" ) {
             navigate( '/' );
-        } else if ( event.target.innerText === "NOTES" ) {
+        } else if ( event.target.innerText === "NOTES" || event.target.innerText === "Notes" ) {
             navigate( '/notes' );
-        } else if ( event.target.innerText === "CREATE NOTES" ) {
+        } else if ( event.target.innerText === "CREATE NOTES" || event.target.innerText === "Create Notes" ) {
             navigate( '/create' );
         }
     };
